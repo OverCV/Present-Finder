@@ -1,17 +1,6 @@
 package modelo;
 
-public record Producto {
-    private static String nombre;
-    private static int edad;
-    private static double precioBase;
-    private static String proveedor;
-
-    public Producto(String nombre, int edad, double precioBase, String proveedor) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.precioBase = precioBase;
-        this.proveedor = proveedor;
-    }
+public record Producto(String nombre, int edad, double precioBase, String proveedor) {
 
     public String getNombre() {
         return nombre;
@@ -31,6 +20,6 @@ public record Producto {
 
     @Override
     public String toString() {
-        return nombre + " - precio base: $" + precioBase + ",0";
+        return nombre + " - precio base: $" + precioBase + ",0.";
     }
 }

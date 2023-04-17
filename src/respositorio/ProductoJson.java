@@ -25,8 +25,8 @@ public class ProductoJson implements ILectorJson<Producto> {
         }
 
         JSONArray jsonArray = new JSONArray(contenidoArchivo);
-        for (int i = 0; i < jsonArray.length(); i++) {
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
+        for (Object o : jsonArray) {
+            JSONObject jsonObject = (JSONObject) o;
             String nombre = jsonObject.getString("nombre");
             int edad = jsonObject.getInt("edad");
             double precio = jsonObject.getDouble("precio");
@@ -35,6 +35,7 @@ public class ProductoJson implements ILectorJson<Producto> {
             Producto producto = new Producto(nombre, edad, precio, proveedor);
             listaProductos.add(producto);
         }
+
     }
 
     @Override

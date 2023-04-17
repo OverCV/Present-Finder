@@ -22,7 +22,6 @@ public class ControlRegalos {
         List<Regalo> regalos = almacen.getRegalos();
         regalos = filtro.filtroPorEdad(regalos, edad);
         regalos = filtro.filtroPorCosto(regalos, costo);
-        //        regalos = regalos.stream().filter(regalo -> regalo.getEdad() == edad && regalo.getPrecioBase() <= costo).collect(Collectors.toList());
         return regalos;
     }
 }
