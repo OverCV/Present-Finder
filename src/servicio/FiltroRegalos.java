@@ -1,4 +1,4 @@
-package sevicio;
+package servicio;
 
 import modelo.Regalo;
 

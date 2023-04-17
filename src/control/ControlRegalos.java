@@ -2,7 +2,7 @@ package control;
 
 import modelo.Regalo;
 import respositorio.Almacen;
-import sevicio.FiltroRegalos;
+import servicio.FiltroRegalos;
 
 import java.util.List;
 
