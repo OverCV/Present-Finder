@@ -1,6 +1,6 @@
 package respositorio;
 
-import modelo.Proveedor;
+import modelo.Producto;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -11,11 +11,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProveedorJson implements ILectorJson<Proveedor> {
-    private final List<Proveedor> listaProveedores = new ArrayList<>();
-    protected String ruta = "src/datos/proveedores.json";
-
-    public ProveedorJson() {
+public class ProductoJson implements ILectorJson<Producto> {
+    private final List<Producto> listaProductos = new ArrayList<>();
+    protected String ruta = "src/datos/productos.json";
+    public ProductoJson() {
         String contenidoArchivo = "";
         try {
             contenidoArchivo = new String(Files.readAllBytes(
@@ -29,15 +28,17 @@ public class ProveedorJson implements ILectorJson<Proveedor> {
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
             String nombre = jsonObject.getString("nombre");
-            double precioEnvio = jsonObject.getDouble("precioEnvio");
+            int edad = jsonObject.getInt("edad");
+            double precio = jsonObject.getDouble("precio");
+            String proveedor = jsonObject.getString("proveedor");
 
-            Proveedor proveedor = new Proveedor(nombre, precioEnvio);
-            listaProveedores.add(proveedor);
+            Producto producto = new Producto(nombre, edad, precio, proveedor);
+            listaProductos.add(producto);
         }
     }
 
     @Override
-    public List<Proveedor> getTList() {
-        return listaProveedores;
+    public List<Producto> getTList() {
+        return listaProductos;
     }
 }

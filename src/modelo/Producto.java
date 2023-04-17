@@ -1,10 +1,10 @@
 package modelo;
 
-public class Producto {
-    private String nombre;
-    private int edad;
-    private double precioBase;
-    private String proveedor;
+public record Producto {
+    private static String nombre;
+    private static int edad;
+    private static double precioBase;
+    private static String proveedor;
 
     public Producto(String nombre, int edad, double precioBase, String proveedor) {
         this.nombre = nombre;
@@ -27,22 +27,6 @@ public class Producto {
 
     public String getProveedor() {
         return proveedor;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public void setPrecioBase(double precioBase) {
-        this.precioBase = precioBase;
-    }
-
-    public void setProveedor(String proveedor) {
-        this.proveedor = proveedor;
     }
 
     @Override

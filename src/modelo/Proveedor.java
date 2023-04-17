@@ -1,4 +1,5 @@
 package modelo;
+
 public class Proveedor {
     private String nombre;
     private double precioEnvio;
@@ -26,9 +27,6 @@ public class Proveedor {
 
     @Override
     public String toString() {
-        return "Proveedor{" +
-                "nombre: '" + nombre + '\'' +
-                ", precioEnvio. " + precioEnvio +
-                '}';
+        return nombre + " - precio envío: $" + precioEnvio + ",0";
     }
 }
