@@ -17,7 +17,7 @@ public class ControlRegalos {
     public List<Regalo> buscarRegalos(int edad, double costo) {
         Almacen almacen = new Almacen();
         if (!almacen.crearRegalos()) {
-        //            TODO: implementar uso de excepción.
+            return null;
         }
         List<Regalo> regalos = almacen.getRegalos();
         regalos = filtro.filtroPorEdad(regalos, edad);
