@@ -21,12 +21,12 @@
     "nombre": "Pelota",
     "edad": 1,
     "precio": 10000.0,
-    "proveedor": "Recreativos"
+    "provedor": "Recreativos"
   },
   {
     "nombre": "Tren",
     "edad": 5,
-    "precio": 90000.0,
+    "preio": 90000.0,
     "proveedor": "Divertidos"
   },
   {
